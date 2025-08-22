@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Veículos</title>
+  <link rel="stylesheet" href="veiculos.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Estacionamento - Veículos</h1>
+        <div class="header-actions">
+          <button id="btnCadastrarEstadia">Cadastrar Estadia</button>
+        </div>
+    </header>
+
+    <section class="busca">
+      <input type="text" id="placaBusca" placeholder="Buscar por placa">
+      <button onclick="buscarVeiculos()">Buscar</button>
+    </section>
+
+    <form id="formCadastro">
+      <h2 id="formTitulo">Cadastrar Veículo</h2>
+      <div class="form-grid">
+        <div class="input-group">
+          <input type="text" id="placa" placeholder="Placa" required>
+        </div>
+        <div class="input-group">
+          <select id="tipo" required>
+            <option value="">Tipo</option>
+            <option value="CARRO">Carro</option>
+            <option value="MOTO">Moto</option>
+            <option value="VAN">Van</option>
+            <option value="CAMINHAO">Caminhão</option>
+            <option value="ONIBUS">Ônibus</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <input type="text" id="proprietario" placeholder="Proprietário" required>
+        </div>
+        <div class="input-group">
+          <input type="text" id="modelo" placeholder="Modelo" required>
+        </div>
+        <div class="input-group">
+          <input type="text" id="marca" placeholder="Marca" required>
+        </div>
+        <div class="input-group">
+          <input type="text" id="cor" placeholder="Cor">
+        </div>
+        <div class="input-group">
+          <input type="number" id="ano" placeholder="Ano">
+        </div>
+        <div class="input-group">
+          <input type="text" id="telefone" placeholder="Telefone" required>
+        </div>
+      </div>
+      <div class="form-buttons">
+        <button type="submit">Salvar</button>
+        <button type="button" id="cancelarEdicao">Cancelar edição</button>
+      </div>
+    </form>
+
+    <section class="lista-veiculos">
+      <h2>Lista de Veículos</h2>
+      <ul id="listaVeiculos"></ul>
+    </section>
+  </div>
+
+  <script src="veiculos.js"></script>
+</body>
+</html>
